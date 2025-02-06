@@ -1,0 +1,324 @@
+@charset "UTF-8";
+
+/* =======================
+   全体設定
+======================= */
+html,
+body {
+	margin: 0;
+	padding: 0;
+	width: 100%;
+	height: 100%;
+	overflow: hidden;
+	color: #082627;
+}
+
+/* 背景キャンバス */
+#canvas {
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: -1; /* 背景として表示 */
+	width: 100%;
+	height: 100%;
+	background: #28A6A5;
+}
+
+/* =======================
+   標準コンテナデザイン (ログイン・登録画面用)
+======================= */
+.standard-container {
+	width: 350px; /* 横幅 */
+	height: 400px; /* 縦幅 */
+	margin: 0 auto;
+	padding: 50px;
+	background-color: #F9FCFD; /* 背景色 */
+	border-radius: 10px; /* 角を丸くする */
+	box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); /* 影を追加 */
+	text-align: center; /* テキストを中央揃え */
+	font-family: Arial, sans-serif;
+	
+	/* 中央配置 */
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
+
+/* タイトルのデザイン */
+.standard-container h1 {
+	font-size: 24px;
+	margin-top: 0px;
+	margin-bottom: 20px;
+	color: #082627;
+}
+
+/* サブタイトルのデザイン */
+.standard-container h2 {
+	font-size: 26px;
+	margin-top: 0px;
+	margin-bottom: 40px;
+	color: #082627;
+}
+
+/* サブテキスト */
+.standard-container p {
+	margin-top: 20px;
+	margin-bottom: 20px;
+	font-size: 20px;
+	color: #082627;
+}
+
+/* リンクのデザイン */
+.standard-container a {
+	color: #28A6A5;
+	text-decoration: none;
+	display: block;
+	margin-top: 30px;
+	font-size: 18px;
+}
+
+.standard-container a:hover {
+	text-decoration: underline;
+}
+
+/* フォーム入力フィールド */
+.standard-container input[type="text"],
+.standard-container input[type="password"] {
+	width: 100%;
+	padding: 8px;
+	margin-bottom: 30px;
+	font-size: 18px;
+	border: 1px solid #ccc;
+	border-radius: 5px;
+	box-sizing: border-box;
+}
+
+/* ボタンのデザイン */
+.standard-container input[type="submit"],
+.standard-container button {
+	width: 100%;
+	padding: 10px;
+	font-size: 18px;
+	color: #F9FCFD;
+	background-color: #28A6A5; /* メインカラー */
+	border: none;
+	border-radius: 5px;
+	cursor: pointer;
+}
+
+.standard-container input[type="submit"]:hover,
+.standard-container button:hover {
+	background-color: #E7674C; /* ホバー時の色 */
+}
+
+/* =======================
+   メイン画面 (掲示板)
+======================= */
+.container {
+	display: grid;
+	grid-template-columns: 250px 1fr 300px; /* 左右のサイドバーを固定幅 */
+	gap: 20px; /* カラム間の余白 */
+	width: 100%;
+	height: 100vh; /* 画面全体の高さを確保 */
+	min-height: 100vh;
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	color: #082627;
+}
+
+/* 左サイドバー */
+.sidebar-left {
+	padding: 20px;
+	border-radius: 8px;
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start; /* 左詰め */
+	justify-content: flex-start; /* 上詰め */
+}
+
+.sidebar-left h2 {
+	font-size: 1.8rem;
+	margin-bottom: 15px;
+	margin-left: 20px;
+}
+
+.sidebar-left p {
+	font-size: 20px;
+	margin-bottom: 20px;
+	margin-left: 20px;
+}
+
+.sidebar-left a {
+	font-size: 20px;
+	text-decoration: underline;
+	margin-bottom: 20px;
+	margin-left: 20px;
+	color: #082627;
+}
+
+/* メインコンテンツ */
+.main-content {
+	flex: 3;
+	padding: 0px 0px 50px 0px;
+	margin-bottom: 50px; /* 下に余白を追加 */
+	border-radius: 8px;
+	height: 100%;
+	display: flex;
+	flex-direction: column;
+	overflow-y: hidden; /* メイン全体でスクロールが出ないように調整 */
+	color: #082627;
+}
+
+.main-content h1 {
+	font-size: 40px;
+	margin-bottom: 20px;
+	text-align: center;
+}
+
+/* 投稿フォーム */
+.box {
+	padding: 8px; /*ボックス内の余白*/
+	border-radius: 10px;
+	background-color: #F9FCFD; /* 背景色を白に設定 */
+}
+
+.tweet-form textarea {
+	background-color: #F9FCFD;
+	width: 100%;
+	border: none;
+	font-size: 15px;
+	outline: none;
+	height: 30px;
+	resize: none;
+}
+
+.tweet-form button {
+	padding: 2px 16px;
+	background-color: #28A6A5;
+	color: #544C40;
+	border: none;
+	border-radius: 5px;
+	cursor: pointer;
+	float: right;
+	margin-top: 8px;
+}
+
+.tweet-form button:hover {
+	background-color: #E8854A;
+}
+
+/* 投稿リスト */
+.tweet-list {
+	flex: 1;
+	overflow-y: auto; /* 縦方向にスクロール可能に */
+	padding: 0px 0px 50px 0px;
+	margin-bottom: 50px;
+	list-style: none;
+	background-color: transparent;
+	border-radius: 8px;
+}
+
+.tweet-list li {
+	padding:0px 10px 5px 15px;
+	margin-top: 0px;
+	margin-bottom: 15px;
+	background: #F9FCFD;
+	box-shadow: 0px 0px 10px 0px #F9FCFD;
+	border-radius: 8px;
+	display: flex;
+	flex-direction: column;
+}
+
+/* ユーザー名・時間・投稿内容 */
+.tweet-list p {
+	font-size: 15px;
+	line-height: 1.8;
+	margin-top: 5px;
+    margin-bottom: 0px;
+}
+
+.tweet-list p strong {
+	font-size: 13px;
+}
+
+.tweet-list p small {
+	font-size: 12px;
+	color: #666;
+}
+
+/* 消去ボタン */
+.tweet-list a {
+	color: #28A6A5;
+	font-size: 14px;
+	text-decoration: none;
+	margin-top: 0px;
+	margin-right: 20px;
+	margin-left: auto;
+	margin-bottom: 0px;
+	display: block;
+	text-align: right;
+}
+
+.tweet-list a:hover {
+	text-decoration: underline;
+}
+
+/* =======================
+   右サイドバー
+======================= */
+.sidebar-right {
+	padding: 20px;
+	border-radius: 8px;
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+	justify-content: flex-start;
+	text-align: left;
+}
+
+.sidebar-right h3 {
+	font-size: 20px;
+	margin-bottom: 20px;
+	text-align: left;
+}
+
+/* 検索フォーム */
+.search-form {
+	display: flex;
+	align-items: center;
+	border: 1px solid #EAE6E1;
+	border-radius: 5px;
+	overflow: hidden;
+	background-color: #FDFDFD;
+}
+
+.search-form input {
+	flex: 1;
+	padding: 10px;
+	border: none;
+	outline: none;
+	font-size: 14px;
+	color: #888;
+	background-color: #FDFDFD;
+}
+
+.search-form button {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	padding: 10px;
+	background-color: #E8854A;
+	border: none;
+	cursor: pointer;
+}
+
+.search-form button:hover {
+	background-color: #28A6A5;
+}
+
+.search-form button svg {
+	fill: none;
+	stroke: #28A6A5;
+}
