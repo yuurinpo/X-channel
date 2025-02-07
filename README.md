@@ -2,8 +2,17 @@
 
 個人的に経験としてXと2ちゃんねるを真似して作ってみました。  
 
+## 画面遷移
+![ログイン画面](https://github.com/user-attachments/assets/a3a47b80-d193-43ec-873d-2ddfc52f3ea0)
+![会員登録画面](https://github.com/user-attachments/assets/cd06960f-2e66-4aa9-ac8a-6a5b0d09ef2a)
+![掲示板ホーム画面](https://github.com/user-attachments/assets/98909d9e-9754-4870-a3b6-89e1cbb108cb)
+
 ## 環境
  * ローカル環境
+
+## 特徴
+ * データベースに会員情報を登録して、登録された会員情報のみログインできる
+ * 掲示板画面では自分が投稿したもののみ削除ボタンから削除ができる
 
 ## X-channelの実行手順
  * 1.H2 Databseのインストール
