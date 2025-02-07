@@ -1,11 +1,13 @@
 # 掲示板システム (Xちゃんねる)
 
-個人的に経験としてXと2ちゃんねるを真似して作ってみました。  
+ご覧いただき、ありがとうございます。個人的に初めてのアプリケーションを作成してみました。<br>
+Xと2ちゃんねるを掛け合わせた「Xちゃんねる」掲示板アプリケーションです。
 
 ## 画面遷移
-![ログイン画面](https://github.com/user-attachments/assets/a3a47b80-d193-43ec-873d-2ddfc52f3ea0)
-![会員登録画面](https://github.com/user-attachments/assets/cd06960f-2e66-4aa9-ac8a-6a5b0d09ef2a)
-![掲示板ホーム画面](https://github.com/user-attachments/assets/98909d9e-9754-4870-a3b6-89e1cbb108cb)
+<img src="https://github.com/user-attachments/assets/a3a47b80-d193-43ec-873d-2ddfc52f3ea0" alt="ログイン画面" width="400">
+<img src="https://github.com/user-attachments/assets/cd06960f-2e66-4aa9-ac8a-6a5b0d09ef2a" alt="会員登録画面" width="400">
+<img src="https://github.com/user-attachments/assets/98909d9e-9754-4870-a3b6-89e1cbb108cb" alt="掲示板ホーム画面" width="400">
+<img src="https://github.com/user-attachments/assets/98909d9e-9754-4870-a3b6-89e1cbb108cb" alt="検索画面" width="400">
 
 ## 環境
  * ローカル環境
