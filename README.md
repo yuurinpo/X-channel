@@ -50,3 +50,29 @@ Xと2ちゃんねるを掛け合わせた「Xちゃんねる」掲示板アプ�
  * 保存済み設定で「Generic H2(Server)」を選択します。
  * JDBC URLはjdbc:h2:tcp://localhost/~/dokoTsubu
  * 「接続」をクリックします。
+
+- - -
+
+## 使用技術とバージョン情報
+
+### 言語
+- **Java**: 21.0.4+7-LTS
+
+### フレームワーク
+- **Jakarta Servlet**: バージョン 5.0
+
+### ライブラリ
+- **H2 Database**: バージョン 2.3.232 (リリース日: 2024-08-11)
+
+### サーバー
+- **Apache Tomcat**: バージョン 10.1.29
+
+### 開発環境
+- **Eclipse IDE for Java Developers**: バージョン 2024-09 (4.33.0)
+
+### 使用技術
+- **Git/GitHub**: ソースコードのバージョン管理
+- **JDBC (Java Database Connectivity)**: データベース接続
+- **HTML5 / CSS3**: フロントエンドのUIデザイン
+- **JavaScript (Canvas API)**: 背景アニメーションの実装
+
