@@ -64,6 +64,9 @@ X（旧Twitter）と2ちゃんねるの要素を組み合わせたシステム�
 にアクセスし、「Download」内の「All Platforms」のリンクをクリックしてZIPファイルをダウンロード。<br>
 2. ダウンロードしたZIPファイルを解凍。<br>
 3. ターミナルを起動し、以下の手順でH2 Databaseを起動。<br>
+cd <H2 Databaseのディレクトリ>/bin
+./h2.sh
+
 
 ### (2) H2 Databaseへの接続
 1. H2コンソールにアクセスし、保存済み設定から「Generic H2(Server)」を選択。<br>
